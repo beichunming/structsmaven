@@ -1,4 +1,4 @@
-package com.bcm.struts.action;
+package com.bcm.ssh.action;
 
 import com.opensymphony.xwork2.ActionSupport;
 

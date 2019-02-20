@@ -5,10 +5,10 @@
         "http://struts.apache.org/dtds/struts-2.5.dtd">
 
 <struts>
-    <!--开发模式下，修改 struts.xml 后不需重启Tomcat便可立即生效  -->
+    <!--开发模式下，修改 ssh.xml 后不需重启Tomcat便可立即生效  -->
     <constant name="struts.devMode" value="true" />
     <package name="null" extends="struts-default">
-        <action name="login" class="com.bcm.struts.action.LoginAction">
+        <action name="login" class="com.bcm.ssh.action.LoginAction">
             <result name="success">success.jsp</result>
             <result name="error">/error.jsp</result>
             <result name="input">/login.jsp</result>
