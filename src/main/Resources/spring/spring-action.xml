@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+           http://www.springframework.org/schema/aop 
+           http://www.springframework.org/schema/aop/spring-aop-4.0.xsd
+           http://www.springframework.org/schema/tx 
+           http://www.springframework.org/schema/tx/spring-tx-4.0.xsd">
+
+	<!--Action交给Spring来管理-->
+	<bean id="productAction" class="com.bcm.ssh.action.ProductAction" scope="prototype">
+		<property name="productService" ref="productService"/>
+	</bean>
+	<bean id="employeeAction" class="com.bcm.ssh.action.EmployeeAction" scope="prototype">
+		<property name="employeeService" ref="employeeService"/>
+	</bean>
+	<bean id="departmentAction" class="com.bcm.ssh.action.DepartmentAction" scope="prototype">
+		<property name="departmentService" ref="departmentService"/>
+	</bean>
+
+</beans>

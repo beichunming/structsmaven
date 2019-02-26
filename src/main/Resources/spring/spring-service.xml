@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+           http://www.springframework.org/schema/aop 
+           http://www.springframework.org/schema/aop/spring-aop-4.0.xsd
+           http://www.springframework.org/schema/tx 
+           http://www.springframework.org/schema/tx/spring-tx-4.0.xsd">
+
+	<!--配置Service层的类-->
+	<bean id="productService" class="com.bcm.ssh.service.ProductService">
+		<property name="productDao" ref="productDao"/>
+	</bean>
+	<bean id="employeeService" class="com.bcm.ssh.service.impl.EmployeeServiceImpl">
+		<property name="employeeDao" ref="employeeDao"/>
+	</bean>
+	<bean id="departmentService" class="com.bcm.ssh.service.impl.DepartmentServiceImpl">
+		<property name="departmentDao" ref="departmentDao"/>
+	</bean>
+</beans>
